@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.atguigu.spring.beans.autowire.Address">
+        <property name="city" value="BJ"></property>
+        <property name="street" value="HLG"></property>
+    </bean>
+
+<!--    <bean id="address2" class="com.atguigu.spring.beans.autowire.Address">-->
+<!--        <property name="city" value="BJ2"></property>-->
+<!--        <property name="street" value="HLG2"></property>-->
+<!--    </bean>-->
+
+    <bean id="car" class="com.atguigu.spring.beans.autowire.Car">
+        <property name="brand" value="BC"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
+    <!-- 手动装配 -->
+<!--    <bean id="person" class="com.atguigu.spring.beans.autowire.Person">-->
+<!--        <property name="address" ref="address"></property>-->
+<!--        <property name="car" ref="car"></property>-->
+<!--    </bean>-->
+
+    <!-- byName的方式来自动装配，原理是根据当前bean的set方法的风格和要装配的bean的id进行匹配，若有匹配的，则自动装配 -->
+<!--    <bean id="person" class="com.atguigu.spring.beans.autowire.Person" autowire="byName"/>-->
+
+    <!-- byType的方式来自动装配，原理是根据当前bean的属性的类型和要装配的bean进行匹配，但是要求当前IOC容器中至多有一个该类型的bean，否则抛异常 -->
+    <bean id="person" class="com.atguigu.spring.beans.autowire.Person" autowire="byType"/>
+
+</beans>

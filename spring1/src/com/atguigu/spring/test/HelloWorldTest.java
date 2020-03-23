@@ -22,7 +22,7 @@ public class HelloWorldTest {
 
     @Test
     public void test1(){
-        //1.创建spring ioc容器的对象实例
+        //1.创建spring ioc容器的对象实例，泛泛的理解，一个spring的配置文件可以对应一个spring ioc容器的对象实例
         //说明1：ClassPathXmlApplicationContext是ApplicationContext接口的实现类，该类从类路径下加载spring的配置文件
         //说明2：工程/模块的classpath（类路径
         //说明3：FileSystemXmlApplicationContext是ApplicationContext接口的实现类，该类从文件系统中加载spring的配置文件
