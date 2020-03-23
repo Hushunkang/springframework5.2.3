@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.atguigu.spring.beans.relation.Address">
+        <property name="city" value="BJ"></property>
+        <property name="street" value="WDK"></property>
+    </bean>
+
+<!--    <bean id="address2" class="com.atguigu.spring.beans.relation.Address">-->
+<!--        <property name="city" value="BJ"></property>-->
+<!--        <property name="street" value="DZS"></property>-->
+<!--    </bean>-->
+
+    <!-- parent属性用于指定当前bean的父bean是哪一个，当前bean相对于父bean而言，称之为子bean，这种操作称为bean与bean之间继承关系 -->
+<!--    <bean id="address2" parent="address">-->
+<!--        <property name="street" value="DZS"></property>-->
+<!--    </bean>-->
+
+    <bean id="address2" parent="address">
+        <property name="street" value="DZS"></property>
+
+        <!-- 虽然继承了，但是还是可以手动设置一下以覆盖继承过来的事物 -->
+        <property name="city" value="WH"></property>
+    </bean>
+
+    <!--  设置一个抽象的bean，不是具体的对象实例，不能被spring ioc容器实例化，它就是用来继承用的，就是一个模板 -->
+    <bean id="address3" class="com.atguigu.spring.beans.relation.Address" abstract="true">
+        <property name="city" value="Beijing"></property>
+        <property name="street" value="TAM"></property>
+    </bean>
+
+    <bean id="address10" class="com.atguigu.spring.beans.autowire.Address">
+        <property name="city" value="BJ"></property>
+        <property name="street" value="DGY"></property>
+    </bean>
+
+    <bean id="car" class="com.atguigu.spring.beans.autowire.Car">
+        <property name="brand" value="BC"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
+    <bean id="person" class="com.atguigu.spring.beans.autowire.Person" depends-on="car">
+        <property name="name" value="Tom"></property>
+        <property name="age" value="25"></property>
+        <property name="address" ref="address10"></property>
+    </bean>
+
+</beans>
