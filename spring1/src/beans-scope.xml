@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        bean标签的scope属性用于配置bean的作用域，默认值为singleton
+        singleton：默认值，spring ioc容器初始化时创建bean的对象实例，在整个容器的生命周期中只创建一个该类的对象实例，即单例的
+        prototype：原型的，spring ioc容器初始化时不创建bean的对象实例，而在每次需要获取bean的对象实例时去创建一个该类的对象实例，即非单例的
+        额外说明：SSH三大框架整合的时候，必须指定Struts2的业务逻辑控制的scope为prototype
+        原理：Struts2是使用成员变量来接收用户请求参数的，而不是局部变量，这样会导致在多线程环境下，尤其是
+        高并发场景下出现数据安全的问题，因此SSH三大框架整合的时候，控制层bean的作用域必须设置为prototype，否则存在数据安全问题
+        除此之外，scope的值还可以为request和session
+     -->
+    <bean id="car" class="com.atguigu.spring.beans.autowire.Car" scope="singleton">
+        <property name="brand" value="BC"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
+    <bean id="car2" class="com.atguigu.spring.beans.autowire.Car" scope="prototype">
+        <property name="brand" value="BC"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
+</beans>
