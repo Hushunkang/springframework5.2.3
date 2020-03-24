@@ -1,6 +1,7 @@
 package com.atguigu.spring.aop.impl;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -21,7 +22,7 @@ import java.util.List;
 @Aspect
 public class LogAspect {
 
-    //声明该方法是一个前置通知方法，在执行目标方法之前执行
+    //声明该方法是一个前置通知方法，在执行目标方法之前，执行的通知
 //    @Before("execution(public int com.atguigu.spring.aop.impl.IArithmeticCalculator.add(int,int))")
 //    @Before("execution(public int com.atguigu.spring.aop.impl.IArithmeticCalculator.*(int,int))")
     @Before("execution(* com.atguigu.spring.aop.impl.IArithmeticCalculator.*(int,int))")
@@ -31,12 +32,11 @@ public class LogAspect {
         System.out.println("The method " + methodName + " begins with " + args);
     }
 
-//    @Around("execution(public int com.atguigu.spring.aop.impl.IArithmeticCalculator.*(int,int))")
-//    public void afterMethod(JoinPoint joinPoint){
-//        String methodName = joinPoint.getSignature().getName();
-//        List<Object> args = Arrays.asList(joinPoint.getArgs());
-//
-//        System.out.println("The method " + methodName + " ends with " + args);
-//    }
+    //声明该方法是一个后置通知方法，在执行目标方法之后（无论目标方法是否发生异常），执行的通知
+    @After("execution(* com.atguigu.spring.aop.impl.*.*(int,int))")
+    public void afterMethod(JoinPoint joinPoint){
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("The method " + methodName + " ends");
+    }
 
 }

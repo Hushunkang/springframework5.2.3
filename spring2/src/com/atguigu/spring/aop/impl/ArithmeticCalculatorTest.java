@@ -15,9 +15,11 @@ public class ArithmeticCalculatorTest {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-config.xml");
 //        ArithmeticCalculatorImpl arithmeticCalculator = ctx.getBean(ArithmeticCalculatorImpl.class);//No qualifying bean of type 'com.atguigu.spring.aop.impl.ArithmeticCalculatorImpl' available
         IArithmeticCalculator arithmeticCalculator = ctx.getBean(IArithmeticCalculator.class);
-        System.out.println("result:" + arithmeticCalculator.add(1,2));
+        int result = arithmeticCalculator.add(1,2);
+        System.out.println("result:" + result);
 
-        System.out.println("result:" + arithmeticCalculator.div(10,2));
+        result = arithmeticCalculator.div(10,0);
+        System.out.println("result:" + result);
     }
 
 }
