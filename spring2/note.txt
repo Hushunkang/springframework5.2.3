@@ -1,0 +1,35 @@
+1）、需要的jar包
+spring helloworld需要的5个jar包
+commons-logging-1.1.1.jar
+spring-beans-4.0.0.RELEASE.jar
+spring-context-4.0.0.RELEASE.jar
+spring-core-4.0.0.RELEASE.jar
+spring-expression-4.0.0.RELEASE.jar
+
+除了spring helloworld外，实现spring aop需要的4个jar包
+com.springsource.org.aopalliance-1.0.0.jar
+com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
+spring-aop-4.0.0.RELEASE.jar
+spring-aspects-4.0.0.RELEASE.jar
+
+2）、在spring配置文件中加入aop的命名空间
+
+3）、基于注解的方式实现spring aop（使用的是AspectJ框架：Java社区里面最完整最流行的AOP框架）
+①、在配置文件中加入如下配置
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+②、把横切关注点的代码抽象到一个切面类当中
+I.切面类要加入到spring ioc容器中，即加入@Component注解
+II.切面类需要声明成一个切面，即加入@Aspect注解
+
+③、在切面类中声明各种通知（一共五种类型的通知）
+I.声明一个通知方法
+II.使用注解（@Before、@After、@AfterRunning、@AfterThrowing、@Around）表明通知方法的类型
+说明：
+@Before：表明这个方法是一个前置通知方法，在执行目标方法之前执行
+@After：表明这个方法是一个后置通知方法，在执行目标方法之后执行
+@AfterRunning：表明这个方法是一个返回通知方法，在目标方法返回结果之后执行
+@AfterThrowing：表明这个方法是一个异常通知方法，在目标方法抛出异常之后执行
+@Around：表明这个方法是一个环绕通知方法，环绕着目标方法执行
+
+④、可以在通知方法中声明一个类型为JoinPoint类型的参数，然后就能访问被代理类的目标方法/业务方法的细节，比如说方法名称和参数值等
