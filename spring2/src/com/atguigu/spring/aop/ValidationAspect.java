@@ -21,7 +21,8 @@ import java.util.Arrays;
 @Order(1)
 public class ValidationAspect {
 
-    @Before(value="execution(public int com.atguigu.spring.aop.impl.IArithmeticCalculator.*(..))")
+//    @Before("execution(public int com.atguigu.spring.aop.impl.IArithmeticCalculator.*(..))")
+    @Before("com.atguigu.spring.aop.impl.LogAspect.declareJoinPointExpression()")
     public void validateArgs(JoinPoint joinpoint){
         System.out.println("Validate:" + Arrays.asList(joinpoint.getArgs()));
     }
