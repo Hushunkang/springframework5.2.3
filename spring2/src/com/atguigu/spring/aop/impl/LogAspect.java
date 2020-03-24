@@ -3,6 +3,7 @@ package com.atguigu.spring.aop.impl;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -19,6 +20,7 @@ import java.util.List;
     //2.然后再把当前类声明成一个切面
 @Component
 @Aspect
+@Order(2)
 public class LogAspect {
 
     //声明该方法是一个前置通知方法，在执行目标方法之前，执行的通知
