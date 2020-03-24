@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @description
  * @create 2020年03月24日 13时19分34秒
  */
-@Component
+@Component("arithmeticCalculator")
 public class ArithmeticCalculatorImpl implements IArithmeticCalculator {
 
     @Override

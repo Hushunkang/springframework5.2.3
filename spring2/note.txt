@@ -28,7 +28,7 @@ II.使用注解（@Before、@After、@AfterRunning、@AfterThrowing、@Around）
 说明：
 @Before：表明这个方法是一个前置通知方法，在执行目标方法之前执行
 @After：表明这个方法是一个后置通知方法，在执行目标方法之后执行
-@AfterRunning：表明这个方法是一个返回通知方法，在目标方法返回结果之后执行
+@AfterReturning：表明这个方法是一个返回通知方法，在目标方法返回结果之后执行
 @AfterThrowing：表明这个方法是一个异常通知方法，在目标方法抛出异常之后执行
 @Around：表明这个方法是一个环绕通知方法，环绕着目标方法执行
 

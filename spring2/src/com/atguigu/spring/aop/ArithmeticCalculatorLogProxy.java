@@ -1,6 +1,7 @@
 package com.atguigu.spring.aop;
 
 import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
@@ -40,7 +41,18 @@ public class ArithmeticCalculatorLogProxy {
                 String methodName = method.getName();
                 //被代理类的方法执行之前，向被代理类的方法中动态注入日志代码
                 System.out.println("The method " + methodName + " begins with:" + Arrays.asList(args));
-                Object result = method.invoke(target, args);
+                Object result = null;
+
+                try {
+                    //前置通知
+                    result = method.invoke(target, args);
+                    //返回通知，返回通知方法是可以访问到目标方法的返回值
+                } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    //异常通知，异常通知方法是可以访问到目标方法的异常
+                }
+                //后置通知，因为目标方法可能会出现异常，因此后置通知方法是不可以访问到目标方法的返回值
+
                 //被代理类的方法执行之后，向被代理类的方法中动态注入日志代码
                 System.out.println("The method minus ends with:" + result);
                 return result;
