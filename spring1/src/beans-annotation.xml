@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 指定spring ioc容器扫描的包（兼顾扫描指定包的子包） -->
+    <!-- resource-pattern属性：资源匹配，过滤只扫描指定的类 -->
+<!--    <context:component-scan-->
+<!--            base-package="com.atguigu.spring.beans.annotation"-->
+<!--            resource-pattern="repository/*.class"/>-->
+
+    <context:component-scan base-package="com.atguigu.spring.beans.annotation">
+        <!-- context:include-filter标签：指定只包含哪些指定表达式的组件，但是要想此配置项看到应有的效果，应该不使用默认的过滤器，即设置use-default-filters="false" -->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>-->
+        <!-- context:exclude-filter标签：指定排除哪些指定表达式的组件 -->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>-->
+
+
+
+        <!-- assignable：可分配的 -->
+        <!-- 配置spring ioc容器中不包含IUserRepository该接口及其所有实现类的bean -->
+<!--        <context:exclude-filter type="assignable" expression="com.atguigu.spring.beans.annotation.repository.IUserRepository"/>-->
+        <!-- 配置spring ioc容器中只包含IUserRepository该接口及其所有实现类的bean，但是要想此配置项看到应有的效果，应该不使用默认的过滤器，即设置use-default-filters="false" -->
+        <context:include-filter type="assignable" expression="com.atguigu.spring.beans.annotation.repository.IUserRepository"/>
+    </context:component-scan>
+
+</beans>
