@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
  * @description
  * @create 2020年03月24日 12时26分40秒
  */
-@Repository("userRepository")
+@Repository("userRepository10")
 public class UserRepository extends BaseRepository<User> {
 }

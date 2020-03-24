@@ -13,7 +13,7 @@ public class GenericDITest {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-generic-di.xml");
-        UserService userService = (UserService) ctx.getBean("userService");
+        UserService userService = (UserService) ctx.getBean("userService10");
         userService.save();
     }
 

@@ -20,7 +20,7 @@ public class PropertiesTest {
         DruidDataSource dataSource = (DruidDataSource) ctx.getBean("dataSource");
         //从数据库连接池对象中获取数据库的连接对象/连接会话，前提是数据库服务端要存在并且开启着的，否则会有连接异常
         System.out.println(dataSource.getConnection());
-        //spring配置文件读取资源文件username出现的问题：https://blog.csdn.net/q1054261752/article/details/52032699
+        //spring配置文件读取资源文件username出现的问题:https://blog.csdn.net/q1054261752/article/details/52032699
     }
 
 }

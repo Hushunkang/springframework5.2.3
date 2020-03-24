@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
  * @description
  * @create 2020年03月24日 12时25分48秒
  */
-@Service("userService")
+@Service("userService10")
 public class UserService extends BaseService<User> {
 }
