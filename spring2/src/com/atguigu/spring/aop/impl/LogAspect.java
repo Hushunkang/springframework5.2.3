@@ -67,7 +67,7 @@ public class LogAspect {
     //环绕通知方法必须有返回值，返回值即为目标方法的返回值
     @Around(value="declareJoinPointExpression()")
     public Object aroundMethod(ProceedingJoinPoint pjd){
-        Object result = null;
+        Object result;
         String methodName = pjd.getSignature().getName();
         List<Object> args = Arrays.asList(pjd.getArgs());
         //执行目标方法
