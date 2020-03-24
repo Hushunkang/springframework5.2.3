@@ -1,7 +1,6 @@
 package com.atguigu.spring.beans.scope;
 
 import com.atguigu.spring.beans.autowire.Car;
-import com.atguigu.spring.beans.relation.Address;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
