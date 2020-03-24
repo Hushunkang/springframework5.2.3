@@ -16,8 +16,8 @@ public class AnnotationTest {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-annotation.xml");
-        TestObject testObject = (TestObject) ctx.getBean("testObject");
-        System.out.println(testObject);
+//        TestObject testObject = (TestObject) ctx.getBean("testObject");
+//        System.out.println(testObject);
 
         UserController userController = (UserController) ctx.getBean("userController");
         System.out.println(userController);
@@ -27,6 +27,8 @@ public class AnnotationTest {
 
         UserRepositoryImpl userRepository = (UserRepositoryImpl) ctx.getBean("userRepository");
         System.out.println(userRepository);
+
+        userController.execute();
     }
 
 }

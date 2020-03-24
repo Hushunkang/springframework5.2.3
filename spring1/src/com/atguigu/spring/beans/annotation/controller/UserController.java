@@ -1,5 +1,8 @@
 package com.atguigu.spring.beans.annotation.controller;
 
+import com.atguigu.spring.beans.annotation.TestObject;
+import com.atguigu.spring.beans.annotation.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,8 +14,16 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
+    @Autowired
+    private IUserService userService;
+
+    @Autowired(required=false)
+    private TestObject testObject;
+
     public void execute() {
         System.out.println("UserController's execute...");
+        userService.save();
+        System.out.println(testObject);
     }
 
 }

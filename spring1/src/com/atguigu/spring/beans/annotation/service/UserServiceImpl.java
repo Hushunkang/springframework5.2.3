@@ -1,5 +1,8 @@
 package com.atguigu.spring.beans.annotation.service;
 
+import com.atguigu.spring.beans.annotation.repository.IUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,9 +14,19 @@ import org.springframework.stereotype.Service;
 @Service(value="userService")
 public class UserServiceImpl implements IUserService {
 
+//    @Autowired
+    private IUserRepository userRepository;
+
+    @Autowired
+//    @Qualifier(value="userRepositoryImpl")
+    public void setUserRepository(@Qualifier(value="userRepositoryImpl") IUserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public void save() {
         System.out.println("UserServiceImpl's save...");
+        userRepository.save();
     }
 
 }

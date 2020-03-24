@@ -22,7 +22,7 @@
         <!-- 配置spring ioc容器中不包含IUserRepository该接口及其所有实现类的bean -->
 <!--        <context:exclude-filter type="assignable" expression="com.atguigu.spring.beans.annotation.repository.IUserRepository"/>-->
         <!-- 配置spring ioc容器中只包含IUserRepository该接口及其所有实现类的bean，但是要想此配置项看到应有的效果，应该不使用默认的过滤器，即设置use-default-filters="false" -->
-        <context:include-filter type="assignable" expression="com.atguigu.spring.beans.annotation.repository.IUserRepository"/>
+<!--        <context:include-filter type="assignable" expression="com.atguigu.spring.beans.annotation.repository.IUserRepository"/>-->
     </context:component-scan>
 
 </beans>
