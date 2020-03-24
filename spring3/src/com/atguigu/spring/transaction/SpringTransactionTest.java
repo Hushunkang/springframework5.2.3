@@ -21,9 +21,9 @@ public class SpringTransactionTest {
         ctx = new ClassPathXmlApplicationContext("spring-config.xml");
         bookShopDao = (IBookShopDao) ctx.getBean("bookShopDao");
 //        bookShopService = ctx.getBean(IBookShopService.class);//这种获取bean的方式要求spring ioc容器中至多有一个与该接口相适配的bean
-        bookShopService = ctx.getBean(BookShopServiceImpl.class);
-        bookShopService2 = ctx.getBean(TestServiceImpl.class);
-        System.out.println(ctx.getBean("bookService").getClass());//class com.atguigu.spring.transaction.BookShopServiceImpl
+//        bookShopService = ctx.getBean(BookShopServiceImpl.class);
+////        bookShopService2 = ctx.getBean(TestServiceImpl.class);
+        System.out.println(ctx.getBean("bookService").getClass());//class com.atguigu.spring.transaction.BookShopServiceImpl 或者 class com.sun.proxy.$Proxy15
         bookShopService = (IBookShopService) ctx.getBean("bookService");
     }
 
