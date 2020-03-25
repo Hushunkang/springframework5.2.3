@@ -8,7 +8,7 @@ package com.atguigu.spring.transaction;
  */
 public interface IBookShopService {
 
-    //用户买书
+    //用户一次性只能买一本书
     void purchase(String username,String isbn);
 
 }
