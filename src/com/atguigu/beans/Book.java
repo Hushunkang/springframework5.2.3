@@ -1,11 +1,14 @@
 package com.atguigu.beans;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
  * @create 2020年03月26日 14时10分50秒
  */
+@Component("book2")
 public class Book {
 
     private int id;

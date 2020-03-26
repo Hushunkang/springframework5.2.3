@@ -15,9 +15,9 @@ import java.util.List;
  * @description
  * @create 2020年03月24日 16时10分12秒
  */
-//把当前类声明成为一个切面
+//把当前类声明成为一个切面类
     //1.需要把当前类放到spring ioc容器中
-    //2.然后再把当前类声明成一个切面
+    //2.然后再把当前类声明成一个切面类
 @Component
 @Aspect
 @Order(2)

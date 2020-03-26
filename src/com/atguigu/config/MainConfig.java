@@ -2,6 +2,7 @@ package com.atguigu.config;
 
 import com.atguigu.beans.Book;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -18,10 +19,10 @@ import org.springframework.context.annotation.Configuration;
 //        @ComponentScan.Filter(type= FilterType.ANNOTATION,classes={Controller.class,Service.class,Configuration.class,Bean.class})
 //})
 //测试结论：@ComponentScan这个注解的作用目标只是@Component、@Controller、@Service、@Repository这四个注解
-//@ComponentScan(value="com.atguigu")
+@ComponentScan(value="com.atguigu")
 public class MainConfig {
 
-    @Bean
+    @Bean("book2")
     public Book book(){
         return new Book(1,"辟邪剑谱",1);
     }

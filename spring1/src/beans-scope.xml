@@ -17,6 +17,13 @@
         <property name="price" value="100000"></property>
     </bean>
 
+    <!-- 用于测试一个spring ioc容器里面是否可以同时存在两个类型一样且名称也一样的Bean的对象实例 -->
+    <!--<bean id="car" class="com.atguigu.spring.beans.autowire.Car" scope="singleton">
+        <property name="brand" value="BM"></property>
+        <property name="price" value="200000"></property>
+    </bean>-->
+    <!-- 测试结果显示，不可以 -->
+
     <bean id="car2" class="com.atguigu.spring.beans.autowire.Car" scope="prototype">
         <property name="brand" value="BC"></property>
         <property name="price" value="100000"></property>
