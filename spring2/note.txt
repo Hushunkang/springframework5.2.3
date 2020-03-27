@@ -15,7 +15,7 @@ spring-aspects-4.0.0.RELEASE.jar
 2）、在spring配置文件中加入aop的命名空间
 
 3）、基于注解的方式实现spring aop（使用的是AspectJ框架：Java社区里面最完整最流行的AOP框架）
-①、在配置文件中加入如下配置
+①、在配置文件中加入如下配置，开启基于xml的aop模式
 <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 ②、把横切关注点的代码抽象到一个切面类当中
