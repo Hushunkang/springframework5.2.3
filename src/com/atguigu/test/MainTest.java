@@ -1,5 +1,6 @@
 package com.atguigu.test;
 
+import com.atguigu.beans.Book;
 import com.atguigu.beans.Person;
 import com.atguigu.config.MainConfig;
 import org.junit.Test;
@@ -16,12 +17,13 @@ public class MainTest {
 
     @Test
     public void test1(){
+        //获取AnnotationConfigApplicationContext这种类型的spring ioc容器类的对象实例
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         System.out.println("Bean的定义统计：" + applicationContext.getBeanDefinitionCount());
 
 
 
-        //细节：通过注解的方式在spring ioc容器里面注册Bean，如果同类型的两个Bean的名称是一样的，那么最终只会有一个Bean被注册了
+        //细节：通过注解的方式在spring ioc容器里面注册Bean，如果同类型的两个Bean的名称是一样的（即id一样），那么最终只会有一个Bean被注册了
         String[] definitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanName : definitionNames) {
 //            Class<?> beanType = applicationContext.getType(beanName);
@@ -40,7 +42,9 @@ public class MainTest {
     public void test2(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         Person person = applicationContext.getBean(Person.class);
+        Book book = applicationContext.getBean(Book.class);
         System.out.println(person);
+        System.out.println(book);
         applicationContext.close();
     }
 
