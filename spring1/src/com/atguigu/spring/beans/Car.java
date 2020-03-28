@@ -11,6 +11,9 @@ public class Car {
 		this.maxSpeed = maxSpeed;
 	}
 
+	public Car() {
+	}
+
 	public Car(String brand, String company) {
 		this.brand = brand;
 		this.company = company;
