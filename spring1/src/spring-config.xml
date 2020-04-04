@@ -44,7 +44,7 @@
         <!-- 外部参考/引用bean -->
 <!--        <property name="car" ref="car"></property>-->
         <property name="car">
-            <!-- 内部参考/引用bean，不能被外部的bean引用，只能在内部使用，可以不用设置id -->
+            <!-- 内部参考/引用bean，不能被外部的bean引用，只能在内部使用，可以不用设置id，id可以省略 -->
             <bean class="com.atguigu.spring.beans.Car">
                 <constructor-arg index="0" value="Benchi"/>
                 <constructor-arg index="1" value="Shanghai"/>
