@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 //@ComponentScan(value="com.atguigu",excludeFilters={
 //        @ComponentScan.Filter(type= FilterType.ANNOTATION,classes={Controller.class,Service.class,Configuration.class,Bean.class})
 //})
-//@ComponentScan这个注解表示只要是标注了@Component、@Controller、@Service、@Repository的Bean都会被注册到spring ioc容器里面
+//@ComponentScan这个注解表示只要是标注了@Component、@Controller、@Service、@Repository的Bean都会被注册到spring ioc容器里面，但是它对@Configuration、@Bean不起作用
 @ComponentScan(value="com.atguigu")
 public class MainConfig {
 
