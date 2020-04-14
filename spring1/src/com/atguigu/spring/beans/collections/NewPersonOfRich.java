@@ -8,7 +8,7 @@ import java.util.Map;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月23日 14时08分13秒
+ * @create 2020年03月23日
  */
 public class NewPersonOfRich {
 

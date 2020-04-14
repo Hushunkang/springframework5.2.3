@@ -10,7 +10,7 @@ import java.util.List;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 16时10分12秒
+ * @create 2020年03月24日
  */
 public class LogAspect {
 

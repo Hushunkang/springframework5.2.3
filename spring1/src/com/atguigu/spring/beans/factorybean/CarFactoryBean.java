@@ -6,7 +6,7 @@ import org.springframework.beans.factory.FactoryBean;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 10时35分55秒
+ * @create 2020年03月24日
  */
 public class CarFactoryBean implements FactoryBean {
 

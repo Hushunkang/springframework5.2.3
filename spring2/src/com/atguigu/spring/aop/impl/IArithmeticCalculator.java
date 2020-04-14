@@ -4,7 +4,7 @@ package com.atguigu.spring.aop.impl;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 12时59分00秒
+ * @create 2020年03月24日
  */
 public interface IArithmeticCalculator {
 

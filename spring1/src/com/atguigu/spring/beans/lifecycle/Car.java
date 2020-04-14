@@ -4,7 +4,7 @@ package com.atguigu.spring.beans.lifecycle;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 09时22分50秒
+ * @create 2020年03月24日
  */
 public class Car {
 

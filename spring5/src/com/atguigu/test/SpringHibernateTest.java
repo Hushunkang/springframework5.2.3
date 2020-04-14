@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 10时50分09秒
+ * @create 2020年03月25日
  */
 public class SpringHibernateTest {
 

@@ -7,7 +7,7 @@ import com.atguigu.spring.transaction.xml.service.IBookShopService;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 07时13分00秒
+ * @create 2020年03月25日
  */
 public class BookShopServiceImpl implements IBookShopService {
 

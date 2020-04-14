@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 10时28分16秒
+ * @create 2020年03月25日
  */
 @Entity
 //@Table(name = "account", schema = "myemployees", catalog = "")
@@ -49,4 +49,5 @@ public class AccountEntity {
     public int hashCode() {
         return Objects.hash(username, balance);
     }
+
 }

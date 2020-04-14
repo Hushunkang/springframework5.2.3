@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 06时11分40秒
+ * @create 2020年03月25日
  */
 public class BookShopDaoImpl implements IBookShopDao {
 

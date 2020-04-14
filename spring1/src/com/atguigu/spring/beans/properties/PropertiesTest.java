@@ -10,7 +10,7 @@ import java.sql.SQLException;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 08时12分48秒
+ * @create 2020年03月24日
  */
 public class PropertiesTest {
 

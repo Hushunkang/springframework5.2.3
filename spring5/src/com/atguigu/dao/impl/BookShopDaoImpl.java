@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 11时13分47秒
+ * @create 2020年03月25日
  */
 @Repository("bookShopDao")
 public class BookShopDaoImpl implements IBookShopDao {

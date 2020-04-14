@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月23日 12时24分03秒
+ * @create 2020年03月23日
  */
 public class HelloWorldTest {
 

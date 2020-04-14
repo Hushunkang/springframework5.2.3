@@ -7,7 +7,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月24日 09时38分05秒
+ * @create 2020年03月24日
  */
 public class MyBeanPostProcessor implements BeanPostProcessor {
 

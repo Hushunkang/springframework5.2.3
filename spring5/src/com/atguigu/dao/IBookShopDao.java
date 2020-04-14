@@ -4,7 +4,7 @@ package com.atguigu.dao;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年03月25日 06时07分07秒
+ * @create 2020年03月25日
  */
 public interface IBookShopDao {
 
